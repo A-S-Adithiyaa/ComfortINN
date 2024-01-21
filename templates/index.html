@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Comfort INN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/main.css') }}">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../images/logo.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header" id="header">
+        <div class="head-top">
+            <div class="site-name">
+                <span>Comfort INN</span>
+            </div>
+            <div class="site-nav">
+                <div class="nav-btn">
+                    <ul>
+                        <li><a class="nav-elem" href="#header">Home</a></li>
+                        <li><a class="nav-elem" href="#services">Services</a></li>
+                        <li><a class="nav-elem" href="#rooms">Rooms</a></li>
+                        <li><a class="nav-elem" href="#customers">Customers</a></li>
+                        <li><a href="./signup/"><button class="btn sign-up">Sign UP</button></a></li>
+                        <li><a href="./signin/"><button class="btn log-in">Log IN</button></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="head-bottom flex">
+            <h2>NICE AND COMFORTABLE PLACE TO STAY</h2>
+            <p>Don't just dream of a vacation, just DO IT!!</p>
+            <p>Are you dreaming of a place to stay? We are here</p>
+            <p>Book your stay with us, and you will be happy to come back</p>
+            <p>We are more than just a room, the hotel for the 1%</p>
+            <p>Customer satisfaction is a philosophy</p>
+            <p>Arrive as guests, leave as friends</p>
+            <a href="/signup"><button type="button" class="head-btn">GET STARTED</button></a>
+        </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- fullscreen modal -->
+    <div id="modal"></div>
+    <!-- end of fullscreen modal -->
+
+    <!-- body content  -->
+    <section class="services sec-width" id="services">
+        <div class="title">
+            <h2>services</h2>
+        </div>
+        <div class="services-container">
+            <!-- single service -->
+            <article class="service">
+                <div class="service-icon">
+                    <span>
+                        <i class="fas fa-utensils"></i>
+                    </span>
+                </div>
+                <div class="service-content">
+                    <h2>Food Service</h2>
+                    <p>The multicuisine all day dining restaurant has a array of cuisines that will leave you spoilt for
+                        a choice. Our restaurant provides a variety of cuisine like, Arabic, Chinees, Indian, Italian,
+                        Continental, Starters. Hygine and Freshness are maintained all the time. </p>
+                    <button type="button" class="btn">Know More</button>
+                </div>
+            </article>
+            <!-- end of single service -->
+            <!-- single service -->
+            <article class="service">
+                <div class="service-icon">
+                    <span>
+                        <i class="fas fa-swimming-pool"></i>
+                    </span>
+                </div>
+                <div class="service-content">
+                    <h2>Swimming Pool</h2>
+                    <p>Be one with the Horizon!. The terrece infinity pool is our show stopper, neatly overlooking the
+                        Beauty of Bangalore across the idealic Whitetown. </p>
+                    <button type="button" class="btn">Know More</button>
+                </div>
+            </article>
+            <!-- end of single service -->
+            <!-- single service -->
+            <article class="service">
+                <div class="service-icon">
+                    <span>
+                        <i class="fas fa-running"></i>
+                    </span>
+                </div>
+                <div class="service-content">
+                    <h2>Gym & Sports</h2>
+                    <p>The only bad workout is the one that didn't happen. The Gym at restaurant enables you to stick to
+                        your personal fitness plans while on a business trip or leisure holidays. Never compromise your
+                        daily routine even when you are away from</p>
+                    <button type="button" class="btn">Know More</button>
+                </div>
+            </article>
+            <!-- end of single service -->
+            <!-- single service -->
+            <article class="service">
+                <div class="service-icon">
+                    <span>
+                        <i class="fas fa-door-closed"></i>
+                    </span>
+                </div>
+                <div class="service-content">
+                    <h2>Room Security</h2>
+                    <p>The entire arena is CCTV surveilanced with 24/7 Security. All rooms are clean and hygenic with a personal waiter at your service. </p>
+                    <button type="button" class="btn">Know More</button>
+                </div>
+            </article>
+            <!-- end of single service -->
+        </div>
+    </section>
+
+    <div class="book">
+        <article class="book"> 
+            <form class="book-form">
+                <div class="form-item">
+                    <label for="checkin-date">Check In Date: </label>
+                    <input type="date" id="chekin-date">
+                </div>
+                <div class="form-item">
+                    <label for="checkout-date">Check Out Date: </label>
+                    <input type="date" id="chekout-date">
+                </div>
+                <div class="form-item">
+                    <label for="adult">Adults: </label>
+                    <input type="number" min="1" value="1" id="adult">
+                </div>
+                <div class="form-item">
+                    <label for="children">Children: </label>
+                    <input type="number" min="1" value="1" id="children">
+                </div>
+                <div class="form-item">
+                    <label for="rooms">Rooms: </label>
+                    <input type="number" min="1" value="1" id="rooms">
+                </div>
+                <div class="form-item">
+                    <input type="submit" class="btn" value="Book Now">
+                </div>
+            </form>
+        </article>
+    </div>
+
+    <section class="rooms sec-width" id="rooms">
+        <div class="title">
+            <h2>rooms</h2>
+        </div>
+        <div class="rooms-container">
+            <!-- single room -->
+            <article class="room">
+                <div class="room-image">
+                    <img src="{{url_for('static', filename='/images/img1.jpg')}}" alt="room imge">
+                </div>
+                <div class="room-text">
+                    <h3>Suite room</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            3 BHK
+                        </li>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            2 attached Restrooms
+                        </li>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Heater available
+                        </li>
+                    </ul>
+                    <p>The suite room is among the most spacious and is fitted out to the best specifications. The suite room consists of a living room which is 300 sq ft in dimension and a bathroom. The suite room offers a king-size double bed.  Each room includes a flat-screen TV and free Wi-Fi for entertainment.</p>
+                    <p class="rate">
+                        <span>₹7,000 /</span> Per Night
+                    </p>
+                    <button type="button" class="btn">book now</button>
+                </div>
+            </article>
+            <!-- end of single room -->
+            <!-- single room -->
+            <article class="room">
+                <div class="room-image">
+                    <img src="{{url_for('static', filename='images/img2.jpg')}}" alt="room imge">
+                </div>
+                <div class="room-text">
+                    <h3>Executive Rooms</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            4 BHK
+                        </li>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            All Restrooms attached
+                        </li>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            In-built swimming pool
+                        </li>
+                    </ul>
+                    <p>The Executive Rooms at Comfort inn  are intricately designed and are the best option for an opulent stay in the temple city of . To make your stay in much more comfortable, these rooms also provide you with a host of amenities such as AC, Wi-Fi, a tea/coffee maker, a wardrobe, and bath slippers, 24 hours room service, and laundry services.</p>
+                    <p class="rate">
+                        <span>₹10,000 /</span> Per Night
+                    </p>
+                    <button type="button" class="btn">book now</button>
+                </div>
+            </article>
+            <!-- end of single room -->
+            <!-- single room -->
+            <article class="room">
+                <div class="room-image">
+                    <img src="{{url_for('static', filename='images/img3.jpg')}}" alt="room imge">
+                </div>
+                <div class="room-text">
+                    <h3>Pool Facing</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            4 BHK
+                        </li>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Balcony view. 
+                        </li>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Jacuzzi included. Private pool with privacy
+                        </li>
+                    </ul>
+                    <p>A relaxing dip in the jacuzzi or pool suits well before coffee. Our Estate Villas and The Residence with private pool or jacuzzi, and Estate Terrace rooms with access to the common pool all present</p>
+                    <p class="rate">
+                        <span>₹12,000/</span> Per Night
+                    </p>
+                    <button type="button" class="btn">book now</button>
+                </div>
+            </article>
+            <!-- end of single room -->
+        </div>
+    </section>
+
+
+    <section class="customers" id="customers">
+        <div class="sec-width">
+            <div class="title">
+                <h2>customers</h2>
+            </div>
+            <div class="customers-container">
+                <!-- single customer -->
+                <div class="customer">
+                    <div class="rating">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="far fa-star"></i></span>
+                    </div>
+                    <h3>We Loved it</h3>
+                    <p>I learn many more things here, in all departments like , food and beverage , food production, house keeping and front office. My area of interest is bakery or quanti .my experience with bakery is exllent.</p>
+                    <img src="{{url_for('static', filename='images/cus1.jpg')}}" alt="customer image">
+                    <span>Joice John, Paris</span>
+                </div>
+                <!-- end of single customer -->
+                <!-- single customer -->
+                <div class="customer">
+                    <div class="rating">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="far fa-star"></i></span>
+                    </div>
+                    <h3>Comfortable Living</h3>
+                    <p>The staff is very warm. Reception is good. Check out takes more time. Breakfast spread is very good. The keys need reprogramming time and again and the desk is far off from the rooms and frustrating to walk the corridor when you are dead tired after visit here.</p>
+                    <img src="{{url_for('static', filename='images/cus2.jpg')}}" alt="customer image">
+                    <span>Mark Brendon, India</span>
+                </div>
+                <!-- end of single customer -->
+                <!-- single customer -->
+                <div class="customer">
+                    <div class="rating">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="far fa-star"></i></span>
+                    </div>
+                    <h3>Best Staffs</h3>
+                    <p>Wonderful experience here, delicious food with amazing hospitality. Specially thanks to restaurant staff Mr. vijay and team.. nice location. Keep it up. Will definitely come back again</p>
+                    <img src="{{url_for('static', filename='images/cus3.jpg')}}" alt="customer image">
+                    <span>Mary, Italy</span>
+                </div>
+                <!-- end of single customer -->
+            </div>
+        </div>
+    </section>
+    <!-- end of body content -->
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h2>About Us </h2>
+                <p>Nestled in this Woodlot are 100 villas, while every window overlooks the dense partition. The private pools are designed for a swim under the canopy and walk amidst the plantations. </p>
+                <ul class="social-icons">
+                    <li class="flex">
+                        <a href="https://twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.instagram.com/"><i class="fa fa-instagram fa-2x"></i></a>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Useful Links</h2>
+                <a href="#">Blog</a>
+                <a href="#">Rooms</a>
+                <a href="#">Subscription</a>
+                <a href="#">Gift Card</a>
+            </div>
+
+            <div>
+                <h2>Privacy</h2>
+                <a href="#">Career</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Services</a>
+            </div>
+
+            <div>
+                <h2>Have A Question</h2>
+                <div class="contact-item">
+                    <span>
+                        <i class="fas fa-map-marker-alt"></i>
+                    </span>
+                    <span>
+                        203 Fake St.Mountain View, Mumbai, India
+                    </span>
+                </div>
+                <div class="contact-item">
+                    <span>
+                        <i class="fas fa-phone-alt"></i>
+                    </span>
+                    <span>
+                        +91 95695 67324
+                    </span>
+                </div>
+                <div class="contact-item">
+                    <span>
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span>
+                        info@comfortinn.com
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

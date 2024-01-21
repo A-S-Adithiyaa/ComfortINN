@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup_in.css') }}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="signup-box parent">
+      <h1>Sign Up</h1>
+      <h4>It's free and only takes a minute</h4>
+      <form name="signup" action="{{url_for('signup')}}" method="post">
+        <label>First Name</label>
+        <input name="fname" type="text" placeholder="" required/>
+        <label>Last Name</label>
+        <input name="lname" type="text" placeholder="" required/>
+        <label>Email</label>
+        <input name="email" type="email" placeholder="" required/>
+        <label>Password</label>
+        <input name="passw" type="password" placeholder="" required/>
+        <label>Confirm Password</label>
+        <input name="cpassw" type="password" placeholder="" required/>
+        <input type="submit" value="Submit" />
+      <closeform></closeform></form>
+      <p>
+        By clicking the Sign Up button,you agree to our <br />
+        <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+      </p>
+      <a href="/"><button class="close">X</button></a>
+    </div>
+    <p class="para-2">
+      Already have an account? <a href="/signin/">Login here</a>
+    </p>
+  </body>
+</html>
