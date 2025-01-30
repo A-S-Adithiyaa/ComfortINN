@@ -4,6 +4,8 @@ import pandas as pd
 app = Flask(__name__)
 df=pf.read_csv('login.csv')
 
+print('hi')
+
 @app.route('/')
 def index():
     return render_template('index.html')
