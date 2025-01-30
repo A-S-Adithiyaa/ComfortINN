@@ -4,7 +4,7 @@ import pandas as pd
 app = Flask(__name__)
 df=pf.read_csv('login.csv')
 
-print('hi hi')
+print('hi')
 
 @app.route('/')
 def index():
